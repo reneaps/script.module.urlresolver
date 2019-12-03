@@ -20,7 +20,7 @@ from lib import jsunpack
 class MixdropResolver(UrlResolver):
     name = "mixdrop"
     domains = ["mixdrop.co"]
-    pattern = r'(?://|\.)(mixdrop\.co)/(?:f|e)/(\w+)'
+    pattern = r'(?://|\.)(mixdrop\.(?:co|to))/(?:f|e)/(\w+)'
 
     def __init__(self):
         self.net = common.Net()
