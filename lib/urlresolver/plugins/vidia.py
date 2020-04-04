@@ -38,7 +38,7 @@ class VidiaResolver(UrlResolver):
         
         if r:
             html = jsunpack.unpack(r.group(1))
-            src = re.search(r'file:\s*"([^"]+mp4)',html)
+            src = re.search(r'file:\s*"([^"]+(|m3u8mp4))',html)
             if src:
                 return src.group(1) + helpers.append_headers(headers)
 
